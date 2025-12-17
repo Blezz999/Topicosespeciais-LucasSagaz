@@ -1,0 +1,178 @@
+/* ====== PALETA DE CORES - Laranja & Azul ====== */
+:root {
+  /* Cores Principais - Laranja e Tons de Azul */
+  --laranja-destaque: #FF7043; /* Laranja Vívido - Destaque */
+  --azul-escuro: #1565C0;     /* Azul Escuro Institucional/Principal */
+  --azul-claro: #42A5F5;      /* Azul Médio/Claro - Secundário */
+  
+  /* Cores Neutras */
+  --preto: #121212;            /* fundo escuro */
+  --cinza-escuro: #1e1e1e;
+  --cinza-medio: #2b2b2b;
+  --cinza-hover: #383838;
+  --branco: #fff;
+}
+
+/* ====== RESET GLOBAL (Sem alteração) ====== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--preto);
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* ====== HEADER DO RELATÓRIO (Ajuste apenas no tema da imagem) ====== */
+.header-banner {
+  /* Mantenha o background da imagem original ou substitua por uma azul/laranja */
+  background: url('/img/abelha_flor.jpg') center/cover no-repeat; 
+  text-align: center;
+  color: var(--branco);
+  padding: 50px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+}
+.header-banner h1 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+.header-banner p {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ====== FILTROS DE DATA E ORDEM ====== */
+.filtros-container { max-width: 1200px; margin: 0 auto 30px; padding: 0 10px; }
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.filtros label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 500;
+}
+.filtros input[type="date"],
+.filtros select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: var(--cinza-medio);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  width: 180px;
+}
+.filtros input[type="date"]:focus,
+.filtros select:focus {
+  /* Foco destacado em Laranja */
+  border-color: var(--laranja-destaque);
+  box-shadow: 0 0 6px rgba(255,112,67,0.6);
+  outline: none;
+  background-color: #333;
+}
+.filtros button {
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  /* Gradiente do botão: Laranja para Azul Escuro */
+  background: linear-gradient(135deg, var(--laranja-destaque), var(--azul-escuro));
+  color: var(--branco);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* ====== CARDS DE RELATÓRIO ====== */
+.cards-container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+.card-relatorio {
+  background: var(--cinza-medio);
+  /* Borda do card em Azul Escuro */
+  border: 2px solid var(--azul-escuro); 
+  border-radius: 12px;
+  padding: 15px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.card-relatorio h3 {
+  cursor: pointer;
+  /* Título do card em Laranja */
+  color: var(--laranja-destaque); 
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-relatorio.open {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+/* ====== TOGGLE ICON (Sem alteração) ====== */
+.toggle-icon { font-size: 1rem; transition: transform 0.3s; }
+.card-relatorio.open .toggle-icon { transform: rotate(90deg); }
+
+/* ====== TABELA ====== */
+.table-bg {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  display: table;
+  /* Mantenha o background da imagem original ou substitua por uma azul/laranja */
+  background: url('/img/abelha_fundo.png') center/cover no-repeat; 
+  color: #fff;
+}
+.table-bg th, .table-bg td {
+  padding: 10px;
+  border: 1px solid #555;
+  text-align: center;
+}
+.table-bg th {
+  /* Gradiente do cabeçalho da tabela: Azul Escuro para Azul Claro */
+  background: linear-gradient(90deg, var(--azul-escuro), var(--azul-claro));
+  color: #fff;
+}
+.table-bg tr:nth-child(even) { background: rgba(30,30,30,0.8); }
+.table-bg tr:hover { background: var(--cinza-hover); transition: 0.3s; }
+
+/* ====== BOTÃO VOLTAR ====== */
+.voltar-container { 
+  max-width: 1200px; 
+  margin: 20px auto 10px; 
+  padding: 0 10px; 
+}
+
+.btn-voltar {
+  /* Gradiente do botão: Laranja para Azul Escuro */
+  background: linear-gradient(135deg, var(--laranja-destaque), var(--azul-escuro)); 
+  color: var(--branco); 
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-voltar:hover {
+  opacity: 0.9; 
+}
+/* ====== TABELA ESCONDIDA/ANIMADA (Sem alteração) ====== */
+.card-relatorio .table-bg {
+  display: none;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.card-relatorio.open .table-bg {
+  display: table;
+  max-height: 2000px; 
+  opacity: 1;
+}

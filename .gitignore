@@ -1,0 +1,5 @@
+# Para bloquear o conteúdo não sendo comitado no github.
+
+/Telas/mysql-8.4
+/Telas/mysql-8
+/Telas/bancodedados/_MABEL_PTKA_070825_.sql

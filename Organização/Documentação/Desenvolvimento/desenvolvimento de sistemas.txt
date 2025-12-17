@@ -1,0 +1,23 @@
+﻿DESENVOLVIMENTO DE SISTEMA 
+Quem fez:  Julia
+
+O QUE É:  
+O Desenvolvimento de Sistemas é o processo abrangente de Criação, implementação e Manutenção de Softwares e Sistemas Computacionais, que envolve a análise de necessidades, o projeto, a codificação, os testes, a documentação e a implantação para resolver problemas específicos e atender a  demandas  de Usuário e empresas.
+
+COMO FUNCIONA: 
+O desenvolvimento de sistemas é o processo de criar softwares que atendem a necessidades específicas, passando por etapas como análise de requisitos, planejamento, design, programação, testes e manutenção. Tudo começa com o entendimento do problema e das demandas do usuário. Em seguida, define-se como o sistema será estruturado e quais tecnologias serão usadas. Os desenvolvedores escrevem o código, testam o funcionamento e, depois, o sistema é implantado. Após isso, ele continua sendo atualizado e ajustado conforme novas necessidades surgem.
+
+QUAL A FINALIDADE:  
+A finalidade do desenvolvimento de sistemas é criar e melhorar softwares e sistemas que solucionam problemas,otimizem processos e atendam às necessidades de usuários e empresas, utilizando a tecnologia para aumentar a eficiência, a produtividade e a competitividade no mercado.
+
+CARACTERÍSTICAS: 
+O desenvolvimento de sistemas é um processo organizado que envolve análise, planejamento, programação, testes e manutenção. Suas principais características são o uso de metodologias, trabalho em equipe e foco na solução de problemas. Ele visa criar sistemas funcionais, seguros e adaptáveis às necessidades dos usuários.
+
+ETAPAS: 
+O desenvolvimento de sistemas passa por várias etapas essenciais, começando pelo levantamento de requisitos, onde se identificam as necessidades dos usuários. Em seguida, ocorre o planejamento e o design do sistema, definindo sua estrutura e funcionamento. Depois vem a codificação, onde o sistema é programado, seguida pelos testes para garantir seu bom desempenho. Por fim, o sistema é implantado e mantido com atualizações e correções contínuas.
+
+OUTRAS INFORMAÇÕES RELEVANTES:
+O desenvolvimento de sistema inclui a importância de escolher uma metodologia adequada, como ágil (Scrum, Kanban) ou tradicional (cascata), que define como o projeto será gerenciado. A documentação é fundamental para registrar o funcionamento e facilitar futuras manutenções. A segurança da informação também é essencial, protegendo os dados do sistema contra acessos não autorizados. Além disso, o trabalho em equipe multidisciplinar, com analistas, desenvolvedores, testadores e gestores, garante que o sistema atenda aos requisitos técnicos e do usuário. Por fim, o feedback contínuo dos usuários ajuda a melhorar o sistema ao longo do tempo.
+( não tenho links porque  utilizei o google a visão geral criada por IA)
+
+segue link do video: https://youtu.be/fpgX6CC7x7A?si=5-udCw6SP47mdyxu

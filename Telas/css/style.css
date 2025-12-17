@@ -1,0 +1,472 @@
+/* ====== RESET GLOBAL ====== */
+/* Remove margens/paddings padrão, define box-sizing e scroll suave */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* ====== VARIÁVEIS DE CORES ====== */
+:root {
+  --amarelo-mel: #fbc02d;       /* Cor tema MABEL - colmeia/mel */
+  --laranja-mel: #f57c00;       /* Cor tema MABEL - colmeia/abelha */
+  --azul-ptqa: #5c6bc0;         /* Cor tema PTQA - Azul Lavanda */
+  --azul-claro-ptqa: #9fa8da;   /* Tom mais claro PTQA */
+  --verde-ifsc: #2e7d32;        /* Cor institucional IFSC */
+  --verde-claro: #66bb6a;       /* Tom mais claro para destaque */
+  --preto: #121212;              /* Fundo escuro */
+  --cinza-escuro: #1e1e1e;      /* Fundo para seções */
+  --cinza-medio: #2b2b2b;       /* Fundo de cards */
+  --cinza-hover: #383838;        /* Hover nos cards */
+  --branco: #ffffff;             /* Texto claro */
+}
+
+/* ====== BASE ====== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #181818 0%, var(--preto) 100%);
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--verde-claro);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--amarelo-mel);
+  text-decoration: underline;
+}
+
+/* ====== BANNER PRINCIPAL (Página Inicial) ====== */
+.banner {
+  position: relative;
+  text-align: center;
+  color: var(--branco);
+  margin-bottom: 40px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.banner img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  filter: brightness(0.65);
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.banner img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.75);
+}
+
+/* ====== BANNER (Adaptação para subpáginas) ====== */
+.banner-small {
+  margin-bottom: 20px;
+}
+
+.banner-small img {
+  max-height: 250px; /* Altura reduzida para banners secundários */
+}
+
+/* Centraliza a caixa de info e torna o background semi-transparente para melhor leitura */
+.banner-small .caixa-info {
+  position: static; 
+  transform: none;
+  background: rgba(18, 18, 18, 0.7); /* Fundo escuro semi-transparente */
+  color: var(--branco);
+  max-width: 100%;
+  border-left: none;
+  border-radius: 0;
+  padding: 15px 30px;
+  text-align: center;
+}
+
+.banner-small .caixa-info h1, 
+.banner-small .caixa-info h2 { /* Incluído h2 para a página 'Sobre' */
+  color: var(--amarelo-mel);
+}
+
+.banner-small a button {
+  display: none; /* Remove o botão "Saiba mais" do banner secundário */
+}
+
+/* ====== BOTÃO DO BANNER PRINCIPAL ====== */
+.banner button {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 28px;
+  font-size: 18px;
+  background: linear-gradient(45deg, var(--amarelo-mel), var(--laranja-mel));
+  color: var(--preto);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.banner button:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ====== CAIXA DE INFORMAÇÃO (Página Inicial) ====== */
+.caixa-info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  padding: 20px 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  border-left: 6px solid var(--verde-ifsc);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 1s ease forwards;
+}
+
+.caixa-info h1 {
+  color: var(--verde-ifsc);
+  margin-bottom: 8px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== SEÇÃO DE ATIVIDADES (GRID) ====== */
+.atividades {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: var(--cinza-escuro);
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.atividades h2 {
+  text-align: center;
+  color: var(--amarelo-mel);
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Contêiner Grid para os Cards */
+.atividades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas maiores */
+  gap: 20px;
+}
+
+/* Para o card de história/dashboard ocupar duas colunas */
+.atividades-grid .full-width {
+  grid-column: span 2;
+}
+
+/* Estilo base do item de atividade */
+.atividade-item {
+  padding: 20px;
+  border-left: 6px solid var(--verde-ifsc); /* Padrão IFSC/Geral */
+  background-color: var(--cinza-medio);
+  border-radius: 10px;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  height: 100%; /* Garante altura igual em uma linha */
+  display: flex; 
+  flex-direction: column;
+}
+
+.atividade-item:hover {
+  transform: translateY(-6px);
+  background-color: var(--cinza-hover);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.atividade-item h3 {
+  margin-top: 0;
+  color: var(--verde-claro);
+  font-size: 1.4em;
+  margin-bottom: 15px; 
+}
+
+/* Ícones nos títulos dos cards */
+.atividade-item h3 i {
+  margin-left: 10px;
+  font-size: 0.9em;
+  color: inherit; 
+}
+
+/* Estiliza listas para melhor legibilidade */
+.atividade-item ul {
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1; 
+}
+
+/* Estilo do ícone da lista */
+.atividade-item ul li::before {
+  content: "🔗 "; 
+  color: var(--verde-claro); 
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5em;
+}
+
+/* ====== ESTILOS TEMÁTICOS DOS CARDS ====== */
+
+/* Tema MABEL: Cores de Abelha (amarelo/laranja) */
+.atividade-item.mabel {
+  border-left-color: var(--laranja-mel); 
+}
+
+.atividade-item.mabel h3 {
+  color: var(--amarelo-mel); 
+}
+
+.atividade-item.mabel ul li::before {
+  content: "🐝 "; /* Ícone de Abelha */
+  color: var(--amarelo-mel);
+}
+
+/* Tema PTQA: Cores de Qualidade do Ar (azul/lavanda) */
+.atividade-item.ptqa {
+  border-left-color: var(--azul-ptqa); 
+}
+
+.atividade-item.ptqa h3 {
+  color: var(--azul-claro-ptqa); 
+}
+
+.atividade-item.ptqa ul li::before {
+  content: "💨 "; /* Ícone de Vento/Ar */
+  color: var(--azul-claro-ptqa);
+}
+
+/* ====== RELATÓRIOS ====== */
+.relatorio {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: var(--cinza-escuro);
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.relatorio h2 {
+  text-align: center;
+  color: var(--amarelo-mel);
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.relatorio h3 {
+  color: var(--verde-claro);
+  border-bottom: 2px solid var(--amarelo-mel);
+  padding-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+/* ====== TABELAS ====== */
+.relatorio table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.relatorio table th,
+.relatorio table td {
+  padding: 12px 15px;
+  border: 1px solid #555;
+}
+
+.relatorio table th {
+  background: linear-gradient(90deg, var(--verde-ifsc), var(--verde-claro));
+  color: #fff;
+  font-weight: bold;
+}
+
+.relatorio table tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+.relatorio table tr:hover {
+  background-color: #3b3b3b;
+  transition: 0.3s;
+}
+
+/* ====== FILTROS ====== */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.filtros label { font-size: 16px; color: #fff; }
+
+.filtros input[type="date"],
+.filtros select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  font-size: 16px;
+  background-color: #222;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.filtros input[type="date"]:focus,
+.filtros select:focus {
+  border-color: var(--amarelo-mel);
+  box-shadow: 0 0 5px rgba(251, 192, 45, 0.6);
+  outline: none;
+  background-color: #333;
+}
+
+.filtros button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--verde-ifsc);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtros button:hover {
+  background-color: var(--verde-claro);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== BOTÕES DE REDIRECIONAMENTO ====== */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.nav-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, var(--amarelo-mel), var(--laranja-mel));
+  color: var(--preto);
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 183, 77, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 180px;
+  text-decoration: none !important;
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transition: left 0.7s;
+}
+
+.nav-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 183, 77, 0.5);
+}
+
+.nav-btn:hover::before { left: 100%; }
+
+.nav-btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 183, 77, 0.4);
+}
+
+/* VARIAÇÕES TEMÁTICAS */
+.nav-btn.mabel {
+  background: linear-gradient(135deg, var(--amarelo-mel), var(--laranja-mel));
+  color: var(--preto); 
+}
+
+.nav-btn.ptqa {
+  background: linear-gradient(135deg, var(--azul-claro-ptqa), var(--azul-ptqa));
+  color: var(--branco); 
+}
+
+/* ÍCONES dentro dos botões */
+.nav-btn i { margin-right: 10px; font-size: 20px; }
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 1024px) {
+  .atividades-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+  }
+
+  .atividades-grid .full-width {
+    grid-column: span 2; /* Ocupa as 2 colunas */
+  }
+}
+
+@media (max-width: 768px) {
+  .relatorio { padding: 20px; }
+  .relatorio h2 { font-size: 28px; }
+  .relatorio h3 { font-size: 20px; }
+  .relatorio table th, .relatorio table td { padding: 8px 10px; }
+
+  .banner img { max-height: 300px; }
+  .caixa-info { max-width: 90%; padding: 10px 15px; }
+  .atividades { padding: 20px 15px; }
+  .banner button { font-size: 16px; padding: 12px 24px; }
+
+  .filtros { flex-direction: column; gap: 10px; }
+  .nav-buttons { flex-direction: column; align-items: center; gap: 15px; }
+  .nav-btn { width: 100%; max-width: 280px; padding: 14px 24px; font-size: 16px; }
+}
+
+@media (max-width: 600px) {
+  .atividades-grid {
+    grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+  }
+
+  .atividades-grid .full-width {
+    grid-column: span 1; /* Ocupa 1 coluna */
+  }
+}

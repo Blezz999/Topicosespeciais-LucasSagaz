@@ -1,0 +1,133 @@
+Quem fez: Lucas Sagaz
+
+SELECT * FROM mytable WHERE datetime between '2015-01-01 00:00:00' and '2015-02-02 00:00:00'
+
+SELECT * FROM leituramabel WHERE dataInclusao between '2024-12-13' and '2024-12-10',
+SELECT * FROM leituramabel WHERE te, ti 
+_________________________________________________________________________
+
+Dando certo
+_________________________________________________________________________
+
+leituramabel
+
+1. Registro diário de temperaturas internas e externas: auxilia a verificar
+oscilações entre dentro e fora da colmeia;
+SELECT dataInclusao, ti, te
+FROM leituramabel
+WHERE dataInclusao = '2024-12-13';
+
+2. Registro diário de umidade interna e externa: permite observar se a colmeia
+está conseguindo manter equilíbrio de umidade;
+SELECT dataInclusao, hi, he
+FROM leituramabel
+WHERE dataInclusao = '2024-12-13';
+
+3. Temperatura média do ninho por dia: fundamental para verificar se o ninho
+mantém temperatura ideal para a sobrevivência das abelhas;
+SELECT 
+    DATE(datahora) AS dia,
+    AVG(ti) AS temperatura_media_interna
+FROM leituramabel
+WHERE ti > 0
+GROUP BY DATE(datahora)
+ORDER BY dia;
+
+
+
+
+
+
+
+4. Top 10 dias mais quentes internamente: alerta para risco de
+superaquecimento. Considerar um mês específico que deverá ser selecionado pelo
+usuário;
+SELECT 
+    DATE(datahora) AS dia,
+    AVG(ti) AS temperatura_media_interna
+FROM leituramabel
+WHERE ti > 0
+GROUP BY DATE(datahora)
+ORDER BY temperatura_media_interna DESC
+LIMIT 10;
+
+
+5. Top 10 dias mais úmidos externamente: mostra influência climática externa
+sobre o ambiente interno.
+
+SELECT 
+    DATE(datahora) AS dia,
+    AVG(he) AS umidade_media_externa
+FROM leituramabel
+WHERE he > 0
+GROUP BY DATE(datahora)
+ORDER BY umidade_media_externa DESC
+LIMIT 10;
+
+_________________________________________________________________________
+
+leituraptqa
+
+
+1. Média diária de temperatura: observar como a temperatura varia diariamente. Permitirá avaliar se há padrões de aquecimento/resfriamento ao longo dos dias;
+
+SELECT 
+    dataleitura AS dia,
+    AVG(temperatura) AS media_temperatura
+FROM leituraptqa
+WHERE temperatura > 0
+GROUP BY dataleitura
+ORDER BY dia;
+
+
+2. Média diária da umidade do ar: importante para avaliar conforto térmico e possíveis impactos em equipamentos;
+SELECT 
+    dataleitura AS dia,
+    AVG(umidade) AS media_umidade
+FROM leituraptqa
+WHERE umidade > 0
+GROUP BY dataleitura
+ORDER BY dia;
+
+
+3. Níveis diários médios de CO₂: permitirá verificar se os ambientes estão com ventilação adequada;
+SELECT 
+    dataleitura AS dia,
+    AVG(eco2) AS media_co2
+FROM leituraptqa
+WHERE eco2 > 0
+GROUP BY dataleitura
+ORDER BY dia;
+
+
+4. Registro de pressões atmosféricas extremas: apoiar análises meteorológicas e previsão de mudanças climáticas locais;
+SELECT 
+    dataleitura AS dia,
+    MIN(pressao) AS pressao_minima,
+    MAX(pressao) AS pressao_maxima
+FROM leituraptqa
+WHERE pressao > 0
+GROUP BY dataleitura
+ORDER BY dia;
+
+
+5. Frequência dos índices de qualidade do ar (AQI): Permitirá observar quantas vezes o ar foi classificado como bom, moderado ou ruim;
+SELECT 
+    aqi,
+    COUNT(*) AS frequencia
+FROM leituraptqa
+GROUP BY aqi
+ORDER BY frequencia DESC;
+
+
+
+6. Médias diárias de gases voláteis (TVOC): identificar poluentes químicos no ambiente.
+SELECT 
+    dataleitura AS dia,
+    AVG(tvoc) AS media_tvoc
+FROM leituraptqa
+WHERE tvoc > 0
+GROUP BY dataleitura
+ORDER BY dia;
+
+

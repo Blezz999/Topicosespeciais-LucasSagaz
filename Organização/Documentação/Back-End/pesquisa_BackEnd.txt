@@ -1,0 +1,94 @@
+Quem fez: Julia.
+
+1. O que é back end?
+O back end é uma combinação de servidores, aplicativos e bancos de dados. É tudo o que os usuários não veem. Basicamente, são as atividades que acontecem nos bastidores ao realizar qualquer ação em um site. Ele se concentra em bancos de dados, lógica de back end, APIs e servidores.
+
+Em síntese, o código escrito por desenvolvedores de back end viabiliza a comunicação com os bancos de dados e plataformas de armazenamento. Para entender o que é back end, é importante saber também que ele proporciona ainda a leitura, atualização e exclusão dos dados ou informações do banco de dados.
+
+2.  Qual a função do back end?
+
+  De nada adianta ter um site com layout incrível e amigável, se a programação dele falhar. Daí a importância de conhecer o que é back end e sua função.
+
+O back end garante um bom funcionamento para o site e uma experiência do usuário fluida e simples, sem maiores problemas. 
+
+São várias as funções do back end. Veja as principais:
+
+Código limpo e sustentável: isso pode incluir a construção de protótipos, a criação de sistemas inteiros do zero, a adição de novos recursos aos sistemas existentes e muito mais.
+Projeto e gerenciamento de banco de dados: quase todo back end armazena dados em um banco de dados. Um desenvolvedor deve ter amplo conhecimento de bancos de dados relacionais e não relacionais.
+Construção e gerenciamento de APIs: seja REST, SOAP, RPC ou GraphQL, as APIs são usadas extensivamente no desenvolvimento de back end como um meio de comunicação com o cliente e outros sistemas.
+Manutenção do servidor web: o desenvolvimento de back end contribui também para a configuração e manutenção do servidor web que hospeda seu código, especialmente em empresas menores e startups que não têm orçamento para contratar um administrador de sistemas.
+Colaboração com desenvolvedores front end: é essencial que o desenvolvedor back end use excelentes habilidades de comunicação para trabalhar de maneira colaborativa com desenvolvedores front-end.
+
+3.Orientado a objetos (OOP): organiza o código em blocos de construção reutilizáveis ​​chamados classes e objetos. As linguagens comuns incluem Python, Java e .NET.
+Programação Funcional: concentra-se em funções matemáticas, minimizando os dados compartilhados. Linguagens como Haskell, Clojure e SQL são exemplos.
+Linguagens de programação de back end
+PHP: uma linguagem de script para sites dinâmicos. Fácil de aprender e amplamente utilizado para formulários da web e bancos de dados.
+Python: linguagem versátil com sintaxe clara, ótima para frameworks web e até mesmo para implantação de aprendizado de máquina em sites.
+Ruby on Rails: a linguagem Ruby permite o desenvolvimento rápido de aplicativos da web. A estrutura Ruby on Rails simplifica a codificação.
+Java: linguagem popular, independente de plataforma e orientada a objetos. É indicada para tarefas versáteis, como conexões de banco de dados e rede.
+.NET: framework ideal para construção de aplicações web usando linguagens como C#. Suporta várias plataformas, incluindo
+ macOS, Windows e Linux.
+
+
+4.O desenvolvimento de back end exige um conjunto de conhecimentos e habilidades, que permite a construção da estrutura de um aplicativo de software ou site. Geralmente, os desenvolvedores trabalham em grupos ou com uma equipe, que inclui profissionais focados em front-end,  arquitetos principais e gerentes de produto.
+
+Os desenvolvedores de back end usam um amplo conjunto de linguagens, incluindo Java .NET, PHP, Ruby, NodeJS, e ferramentas como servidores MySQL, MongoDB, Oracle e SQL. Tudo isso permite criar, ler, atualizar ou excluir dados e devolvê-los ao cliente ou ao front end do aplicativo. 
+
+A seguir, listamos os principais recursos usados no desenvolvimento de back end. 
+
+
+4.O desenvolvimento backend cuida da "logística invisível" de um sistema, focando em servidores, bancos de dados e segurança. Curiosidades incluem que ele é essencial para o funcionamento do front-end (a parte visível do usuário), é o local de maior vulnerabilidade a ciberataques, e exige conhecimentos em linguagens como PHP ou Node, além de bancos de dados relacionais e não relacionais. A área oferece boas oportunidades e salários atrativos devido à sua importância e à falta de profissionais qualificados. 
+
+
+
+Quais as linguagens utilizadas por um desenvolvedor de back end?
+Na prática, o funcionamento de um site ou aplicativo depende do bom desenvolvimento do back end por meio de diferentes linguagens de programação. 
+
+Mas, afinal, quais são usadas pelos desenvolvedores? Listamos as principais, a seguir.
+
+HTML 
+Abreviação de Hypertext Markup Language, HTML é a tecnologia que cria uma estrutura para exibir sites em navegadores como Firefox ou Chrome. Ele contém texto, imagens e hipertexto, e permite a navegação de página em página ao mesmo tempo em que fornece uma plataforma amigável para formatação de documentos. 
+
+É usada tanto no front end como no back end para fornecer um acesso fluido e com interface intuitiva para o usuário.
+
+CSS
+Abreviação de Cascading Style Sheets, CSS é a linguagem que permite aos desenvolvedores personalizar a aparência de um site. CSS pode incluir as fontes usadas para o texto, os esquemas de cores e a organização do texto. 
+
+Java
+Os sites não são documentos estáticos e JavaScript é a linguagem de programação de computador que permite elementos e efeitos interativos em uma página. Se um cliente quiser uma imagem animada, mídia incorporada ou outro conteúdo ativo, o desenvolvedor de back end precisa dessa habilidade crítica.  
+
+Python
+Python  é uma linguagem orientada a objetos que se concentra na manipulação de objetos que contêm dados. Considerada uma linguagem direta, possui uma sintaxe simples que facilita a leitura e a depuração. 
+
+Com Python, os desenvolvedores da web podem usar a estrutura de código aberto Django para criar software escalável, ou facilmente atualizado e com classificação lateral para a web. 
+
+Ruby
+Ruby é uma linguagem de programação que pode ser usada com Ruby on Rails (RoR), um framework feito especificamente para Ruby que permite criar e executar tarefas usando menos código. Os frameworks costumam ser ótimas ferramentas para arquitetos de software que constroem a base de um aplicativo ou programa usando as bibliotecas de código do framework, ferramentas integradas e funções especiais. Todos esses recursos simplificam o processo de codificação.
+
+PHP
+PHP é a sigla para pré-processador de hipertexto. Como uma linguagem de script, o código criado pelo desenvolvedor passa por um interpretador para ser lido por um computador, em vez de um compilador, onde seria traduzido em código legível por máquina. 
+
+Os desenvolvedores usam PHP para funcionalidade do lado do servidor e isso facilita a implantação ou envio e confirmação de seu código com ferramentas e recursos de implantação. O PHP se destaca também porque permite incorporar o código PHP em HTML, ferramenta front-end para projetar páginas e aplicativos da web.
+
+
+O desenvolvedor back-end é um profissional especialista no desenvolvimento web. Ele tem a responsabilidade de planejar, programar, testar e manter a estrutura de códigos que faz a interface entre um site, o servidor e o banco de dados. Sua atuação é fundamental para garantir a eficiência e a segurança do sistema.
+0
+O trabalho de um desenvolvedor back-end está associado com as demandas de criação, implementação e manutenção em bancos de dados. Consequentemente, suas ações endossam a segurança e o sigilo de informações pessoais e armazenadas em bancos de dados de empresas/instituições.
+
+A versatilidade de atuação é uma das características deste profissional. Atualmente, o desenvolvedor back-end possui atuação comumente atrelada aos e-commerces, aplicativos, softwares comerciais e desenvolvimento de sites. 
+
+O profissional deve apresentar conhecimento aprofundado sobre os serviços e produtos da empresa que atua. Afinal, o desenvolvedor back-end terá obrigação de encontrar soluções de otimização, segurança e melhorias, dentro das características de negócio da marca ou empresa que atua.
+
+O curso de graduação possui período de formação de até cinco semestres (quatro anos) para a conclusão. Consequentemente, a carga horária pode superar 1.500 horas de conhecimentos desta área. Por outro lado, a pós-graduação é destinada para profissionais que já possuem graduação completa e é vista como um diferencial aos olhos do mercado de trabalho. 
+
++ Veja bolsas de estudo para o curso de Análise e Desenvolvimento de Sistemas
+
+Veja também: Se você tem interesse de cursar Análise e Desenvolvimento de Sistemas, pode encontrar bolsas de estudos que deixam as mensalidades mais baratas. Uma das boas opções de graduação nesta área com bolsas de estudo é o curso de Análise e Desenvolvimento de Sistemas da UFBRA.
+
+
+
+
+
+
+
+

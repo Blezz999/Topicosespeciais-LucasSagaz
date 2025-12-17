@@ -1,0 +1,92 @@
+Pesquisa: Especificações do Protótipo de Sistema Web e Dashboard para o MABEL e PTQA
+Quem fez: Emilly
+1. Introdução
+
+O avanço da tecnologia permite a aplicação de sistemas embarcados e soluções web no monitoramento ambiental. No Instituto Federal de Santa Catarina (IFSC) – câmpus Chapecó, dois projetos de destaque vêm sendo desenvolvidos:
+
+MABEL: monitoramento da colmeia artificial de abelhas sem ferrão.
+
+PTQA: monitoramento da qualidade do ar no câmpus.
+
+Ambos utilizam hardware baseado em Arduino com sensores específicos, sendo os dados coletados armazenados em um servidor web na nuvem. Para a disciplina de Programação Web, está prevista a criação de um protótipo de sistema web e dashboards que possibilitem a visualização e análise das informações coletadas.
+
+2. Objetivos
+
+Desenvolver um protótipo de sistema web integrado aos projetos MABEL e PTQA.
+
+Implementar dashboards para apresentação dos dados em tempo real.
+
+Oferecer relatórios acessíveis de forma simples e organizada.
+
+Trabalhar de forma incremental, aplicando boas práticas de versionamento, design e pesquisa tecnológica.
+
+3. Especificações do Protótipo
+3.1 Tecnologias Utilizadas
+
+Front-end: HTML, CSS e JavaScript.
+
+Back-end: PHP.
+
+Banco de Dados: MySQL (acesso via phpMyAdmin).
+
+IDE: Visual Studio Code.
+
+Controle de Versão: Git e GitHub Desktop.
+
+Repositório Remoto: GitHub.
+
+Linguagem de consulta: SQL.
+
+Ambiente local de desenvolvimento: XAMPP.
+
+3.2 Estrutura de Telas
+
+O protótipo conterá no mínimo quatro telas principais:
+
+Tela Inicial
+
+Exibição de imagem do IFSC câmpus Chapecó.
+
+Nomes dos integrantes do grupo.
+
+Acesso ao Dashboard MABEL, Dashboard PTQA e módulo de relatórios.
+
+Dashboard MABEL
+
+Visualização dos dados da colmeia artificial (temperatura, umidade, etc.).
+
+Representação gráfica em tempo real.
+
+Dashboard PTQA
+
+Visualização dos dados de qualidade do ar.
+
+Representação gráfica em tempo real.
+
+Módulo de Relatórios
+
+Geração de relatórios com base nos dados coletados.
+
+Possibilidade de exportação em formatos como PDF ou CSV (opcional).
+
+3.3 Metodologia de Desenvolvimento
+
+O projeto será incremental, ou seja, cada etapa será implementada e revisada ao longo da disciplina.
+
+As especificações podem ser atualizadas conforme surgirem novas necessidades.
+
+O design será definido de forma criativa, permitindo liberdade estética e funcional.
+
+4. Resultados Esperados
+
+Criação de um sistema web funcional com dashboards dinâmicos.
+
+Melhor compreensão dos dados coletados pelos projetos MABEL e PTQA.
+
+Ferramenta de apoio para estudos ambientais no câmpus Chapecó.
+
+Experiência prática dos alunos no uso de tecnologias web, banco de dados e versionamento de código.
+
+5. Conclusão
+
+Este protótipo unirá hardware, software e design em uma aplicação prática para monitoramento ambiental. Além de atender às demandas do IFSC, será uma oportunidade para os alunos aplicarem conceitos de programação web, banco de dados e boas práticas de desenvolvimento.

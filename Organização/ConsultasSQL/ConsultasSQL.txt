@@ -1,0 +1,20 @@
+Tem que ter Where em tudo no código php
+
+SELECT * FROM `leituramabel` WHERE `idleituramabel` = '3';
+
+SELECT * FROM `leituramabel` WHERE `dataInclusao` = '2024-12-13';
+
+SELECT * FROM `leituramabel` WHERE `horaInclusao` = '10:22:00';
+
+SELECT * FROM `leituramabel` WHERE `hi` = '25.5';
+
+SELECT * FROM `leituramabel` WHERE `he` = '25.5';
+
+SELECT * FROM `leituramabel` WHERE `ti` = '0';
+
+SELECT * FROM `leituramabel` WHERE `te` = '25.5';
+
+SELECT * FROM `leituramabel` WHERE `ninho` = '0';
+
+SELECT * FROM `leituramabel` WHERE `datahora` = '2025-06-03 00:13:10';
+

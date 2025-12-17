@@ -1,0 +1,445 @@
+ Quem fez: João
+
+1️. O que é um dashboard
+
+Um dashboard é como um painel de controle do carro, mas para informações. Ele mostra os dados importantes de forma resumida e organizada, usando gráficos, tabelas e indicadores (KPIs), para ajudar a tomar decisões rápidas.
+
+Como funciona
+
+Coleta dados de várias fontes: planilhas, banco de dados, APIs (sites ou sistemas que fornecem informações).
+
+Processa esses dados para organizar e calcular as informações importantes.
+
+Mostra os resultados em gráficos e tabelas para o usuário.
+
+Atualização em tempo real:
+
+Alguns dashboards atualizam os dados automaticamente usando tecnologias como WebSockets ou APIs, sem precisar recarregar a página.
+
+ Tecnologias
+
+JavaScript: ApexCharts e Chart.js (para gráficos).
+
+Power BI Embedded: para colocar dashboards prontos dentro de sites ou apps.
+
+Outras opções: Tableau, Google Data Studio, Grafana.
+
+Boas práticas
+
+Mostrar só o que é importante.
+
+Usar cores consistentes, sem poluição visual.
+
+Garantir que funcione bem em celulares, tablets e computadores.
+
+Incluir filtros e legendas.
+
+Destacar os KPIs (com cores ou ícones).
+
+2️. Como criar um dashboard (etapas do desenvolvimento)
+
+Levantamento de requisitos: descobrir o que o cliente precisa.
+
+Prototipação: fazer um rascunho visual do dashboard.
+
+Implementação: programar usando linguagens e frameworks.
+
+Testes: ver se está funcionando corretamente.
+
+Manutenção: corrigir erros e melhorar depois que o dashboard estiver pronto.
+
+Métodos de desenvolvimento
+
+Tradicional (Cascata): faz tudo em etapas sequenciais; difícil mudar depois.
+
+Ágil: trabalha em ciclos curtos (sprints), permite mudar e receber feedback rápido.
+
+Versionamento de código
+
+Git: controla todas as versões do código.
+
+GitHub: armazena o código online e permite colaboração.
+
+ Ambiente de desenvolvimento
+
+Local (XAMPP): roda no computador do desenvolvedor, bom para testes.
+
+Nuvem (AWS, Azure, Render): roda na internet, permitindo acesso remoto e escalabilidade.
+
+3️. Back-end e banco de dados
+
+O back-end é a parte que processa os dados e se conecta ao banco.
+
+PHP + MySQL
+
+PHP: arquivos que controlam o sistema (login, cadastro, listagem).
+
+Estrutura recomendada: pastas como config/, model/, controller/, view/.
+
+MySQL: banco de dados que guarda os dados.
+
+CRUD (as ações principais)
+
+C – Create (Inserir dados)
+
+R – Read (Listar/buscar dados)
+
+U – Update (Atualizar dados)
+
+D – Delete (Excluir dados)
+
+Conexão segura com PDO
+<?php
+try {
+  $conn = new PDO("mysql:host=localhost;dbname=meubanco", "root", "");
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Conectado com sucesso!";
+} catch(PDOException $e) {
+  echo "Erro: " . $e->getMessage();
+}
+?>
+
+
+PDO ajuda a proteger contra ataques (SQL Injection).
+
+phpMyAdmin
+
+Interface web para gerenciar o banco MySQL.
+
+Dá para criar tabelas, inserir, editar, excluir dados e fazer backup.
+
+4️. Bibliotecas de gráficos
+ApexCharts
+
+Cria gráficos interativos e bonitos.
+
+Suporta tipos avançados: linha, barra, pizza, radar, candlestick (finanças), heatmap, misto.
+
+Fácil de integrar com React, Vue e Angular.
+
+Exemplo de uso: vendas, desempenho, indicadores financeiros.
+
+Chart.js
+
+Gráficos simples, rápidos e leves.
+
+Suporta linha, barra, pizza, radar, área, dispersão, entre outros.
+
+Baseado em HTML5 Canvas.
+
+Exemplo básico:
+
+<canvas id="myChart"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('myChart');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Jan', 'Fev', 'Mar', 'Abr'],
+    datasets: [{
+      label: 'Vendas',
+      data: [10, 20, 30, 40],
+      backgroundColor: ['#36A2EB', '#FF6384', '#FFCE56', '#4BC0C0']
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { title: { display: true, text: 'Gráfico de Vendas Mensais' } }
+  }
+});
+</script>
+
+Comparação Chart.js x ApexCharts
+Característica	Chart.js	ApexCharts
+Facilidade	Muito simples	Um pouco mais difícil, mas mais recursos
+Gráficos	Básicos	Avançados (heatmap, candlestick…)
+Interatividade	Limitada	Alta (zoom, drag…)
+Performance	Excelente com poucos dados	Melhor com muitos dados
+Tamanho	Leve (~60 KB)	Mais pesado (~250 KB)
+Uso ideal	Dashboards simples	Dashboards empresariais ou complexos
+
+5️. Power BI
+
+Ferramenta da Microsoft para criar dashboards e relatórios.
+
+Transforma dados em gráficos e indicadores interativos.
+
+Como funciona
+
+Conecta a várias fontes (Excel, SQL, Google Analytics, APIs).
+
+Transforma os dados (limpar e organizar).
+
+Modela os dados (criar relações e cálculos).
+
+Visualiza os dados (gráficos, mapas, KPIs).
+
+Vantagens
+
+Interface fácil de usar, mesmo para quem não programa.
+
+Dashboards bonitos e interativos.
+
+Integra com Excel, Azure, Teams.
+
+Limitações
+
+Versão gratuita tem limites de compartilhamento.
+
+Pode ser pesado em computadores fracos.
+
+Algumas funções precisam da licença Pro.
+
+6️. Exemplo de SQL para um projeto real (sensor de abelhas)
+
+Tabela: LeituraMabel
+
+Colunas: id, sensor_id, valor, data_hora, status
+
+Exemplos de consultas:
+
+Temperatura interna:
+
+SELECT data_hora, valor AS temperatura_interna
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'temperatura_interna'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+ORDER BY data_hora;
+
+
+Umidade externa:
+
+SELECT data_hora, valor AS umidade_externa
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'umidade_externa'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+ORDER BY data_hora;
+
+
+Média de temperatura do ninho:
+
+SELECT DATE(data_hora) AS dia, AVG(valor) AS media_temperatura
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'temperatura_interna'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+GROUP BY DATE(data_hora)
+ORDER BY dia;
+
+
+Dias fora do intervalo ideal (32°C a 36°C):
+
+SELECT data_hora, valor AS temperatura
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'temperatura_interna'
+AND (valor < 32 OR valor > 36)
+ORDER BY data_hora;
+
+
+Objetivo: Evitar redundância de dados e garantir integridade.
+
+Estratégias aplicáveis:
+
+Criar uma tabela Sensor com informações do sensor (id, tipo, local, unidade), evitando repetir dados em cada leitura.
+
+Tabelas LeituraMabel e LeituraPTQA armazenam apenas id do sensor, valor, data/hora e status.
+
+Exemplo:
+
+CREATE TABLE Sensor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    tipo VARCHAR(30),
+    unidade VARCHAR(10),
+    localizacao VARCHAR(50)
+);
+
+Índices
+
+Melhoram a performance de consultas filtradas por data e sensor.
+
+Índices recomendados:
+
+CREATE INDEX idx_data_hora_mabel ON LeituraMabel(data_hora);
+CREATE INDEX idx_sensor_mabel ON LeituraMabel(sensor_id);
+
+CREATE INDEX idx_data_hora_ptqa ON LeituraPTQA(data_hora);
+CREATE INDEX idx_sensor_ptqa ON LeituraPTQA(sensor_id);
+
+
+Para consultas por período, o índice em data_hora é fundamental.
+
+Índices combinados (sensor_id + data_hora) podem acelerar relatórios específicos por sensor.
+-- Temperatura interna
+SELECT data_hora, valor AS temperatura_interna
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'temperatura_interna'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+ORDER BY data_hora;
+
+-- Temperatura externa
+SELECT data_hora, valor AS temperatura_externa
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'temperatura_externa'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+ORDER BY data_hora;
+b) Registro de umidade interna e externa
+Mesma lógica dos sensores de temperatura:
+
+sql
+Copiar código
+-- Umidade interna
+SELECT data_hora, valor AS umidade_interna
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'umidade_interna'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+ORDER BY data_hora;
+
+-- Umidade externa
+SELECT data_hora, valor AS umidade_externa
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'umidade_externa'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+ORDER BY data_hora;
+c) Cálculo de médias de temperatura do ninho
+Para monitorar o conforto térmico das abelhas, calculamos a média de temperatura interna por dia:
+
+sql
+Copiar código
+SELECT DATE(data_hora) AS dia, AVG(valor) AS media_temperatura
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'temperatura_interna'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+GROUP BY DATE(data_hora)
+ORDER BY dia;
+d) Top 10 dias mais quentes/úmidos
+Dias mais quentes:
+sql
+Copiar código
+SELECT DATE(data_hora) AS dia, AVG(valor) AS media_temperatura
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'temperatura_interna'
+GROUP BY DATE(data_hora)
+ORDER BY media_temperatura DESC
+LIMIT 10;
+Dias mais úmidos:
+sql
+Copiar código
+SELECT DATE(data_hora) AS dia, AVG(valor) AS media_umidade
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'umidade_interna'
+GROUP BY DATE(data_hora)
+ORDER BY media_umidade DESC
+LIMIT 10;
+e) Riscos climáticos para as abelhas
+Temperaturas abaixo de 32°C ou acima de 36°C podem comprometer a atividade das abelhas.
+
+Umidade extremamente baixa (<40%) ou alta (>80%) aumenta risco de doenças e problemas no ninho.
+
+Exemplo de consulta para identificar leituras de risco:
+
+sql
+Copiar código
+SELECT data_hora, valor AS temperatura
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'temperatura_interna'
+AND (valor < 32 OR valor > 36)
+ORDER BY data_hora;
+sql
+Copiar código
+SELECT data_hora, valor AS umidade
+FROM LeituraMabel
+JOIN Sensor ON LeituraMabel.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'umidade_interna'
+AND (valor < 40 OR valor > 80)
+ORDER BY data_hora;
+Essas consultas permitem alertas automáticos em dashboards, garantindo a saúde das colmeias.
+
+ 
+3️. Consultas e Relatórios PTQA
+
+O protótipo PTQA monitora parâmetros de qualidade do ar e ambiente, essenciais para garantir um ambiente seguro e saudável para colmeias ou áreas sensíveis.
+
+a) Média diária de temperatura e umidade
+
+Para acompanhar as condições ambientais médias por dia:
+
+-- Média diária de temperatura
+SELECT DATE(data_hora) AS dia, AVG(valor) AS media_temperatura
+FROM LeituraPTQA
+JOIN Sensor ON LeituraPTQA.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'temperatura'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+GROUP BY DATE(data_hora)
+ORDER BY dia;
+
+-- Média diária de umidade
+SELECT DATE(data_hora) AS dia, AVG(valor) AS media_umidade
+FROM LeituraPTQA
+JOIN Sensor ON LeituraPTQA.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'umidade'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+GROUP BY DATE(data_hora)
+ORDER BY dia;
+
+b) Níveis médios de CO₂
+
+Monitoramento do dióxido de carbono, importante para a qualidade do ar:
+
+SELECT DATE(data_hora) AS dia, AVG(valor) AS media_CO2
+FROM LeituraPTQA
+JOIN Sensor ON LeituraPTQA.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'CO2'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+GROUP BY DATE(data_hora)
+ORDER BY dia;
+
+c) Registro de pressões atmosféricas extremas
+
+Detectar condições críticas de pressão que podem afetar sensores ou o ambiente:
+
+SELECT data_hora, valor AS pressao_atmosferica
+FROM LeituraPTQA
+JOIN Sensor ON LeituraPTQA.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'pressao'
+AND (valor < 980 OR valor > 1050)  -- Limites considerados extremos
+ORDER BY data_hora;
+
+d) Frequência dos índices de qualidade do ar (AQI)
+
+Calcular quantas vezes cada categoria do AQI foi registrada:
+
+SELECT valor AS AQI, COUNT(*) AS frequencia
+FROM LeituraPTQA
+JOIN Sensor ON LeituraPTQA.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'AQI'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+GROUP BY valor
+ORDER BY frequencia DESC;
+
+
+Essa consulta ajuda a identificar períodos críticos de poluição ou degradação da qualidade do ar.
+
+e) Médias diárias de gases voláteis (TVOC)
+
+Monitoramento de compostos orgânicos voláteis, que indicam poluição do ar interno:
+
+SELECT DATE(data_hora) AS dia, AVG(valor) AS media_TVOC
+FROM LeituraPTQA
+JOIN Sensor ON LeituraPTQA.sensor_id = Sensor.id
+WHERE Sensor.tipo = 'TVOC'
+AND data_hora BETWEEN '2025-10-01' AND '2025-10-08'
+GROUP BY DATE(data_hora)
+ORDER BY dia;

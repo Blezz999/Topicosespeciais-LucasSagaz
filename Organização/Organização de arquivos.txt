@@ -1,0 +1,147 @@
+Organização: com / é nome de pasta
+Quem fez: Emilly
+
+sla:
+- .gitattributes
+- /dahsboard_repository
+
+- /Organização
+      - Checklist
+        - checklist_prototipo.xlx
+      - /ConsultaSQL  
+        - Comandos phpMyAdmin.pdf
+      - /Dashboard  
+        - Dashboard.txt
+      - /Desenvolvimento
+          - Desenvolvimento de sistemas.txt       
+      - /Erros
+          - registro_de_erros.txt
+      - /Pesquisa
+          - Especificações.txt
+      - /RelatorioSQL
+          - comandos.PDF
+          - Relatorio#1.txt
+      - /imagens Prototipo
+          - Prototipagem de telas Rascunho.jpeg
+          - Prototipo de tela.png
+      - consultas.php
+      - Organização de arquivos.txt <- este  arquivo
+
+- /Telas
+
+    - /bancodedados:
+      - _MABEL_PTKA_070825_.sql
+      - banco de dados.txt
+      - requisitos.Sql
+      - /css
+        - relatorio.css
+        - style.css
+      - /img
+        - imagens do projeto
+      - /mysql-8
+      - /mysql-8.4
+      - /java
+        - alarms.js      
+      -conexao.php
+      - footer.php
+      - header.php
+      - index.php  
+      - mabel.php
+      - ptqa.php  
+      - relatorios.php
+      - sobre.php
+      - .gitattributes
+
+----------------------------------------------------------------
+
+Raiz do projeto
+
+.gitattributes → Arquivo de configuração do Git, usado para definir como tratar certos arquivos, por exemplo, finais de linha e arquivos binários.
+
+/dashboard_repository → Pasta que provavelmente contém a cópia ou versão do repositório do projeto.
+
+/bancodedados
+
+_MABEL_PTKA_070825_.sql → Backup ou script SQL do banco de dados, com tabelas e dados de Mabel e PTQA. Provavelmente usado para restaurar o banco de dados localmente.
+
+/Organização
+
+Pasta para documentação, planejamento e arquivos de suporte.
+
+Checklist
+
+checklist_prototipo.xlx → Planilha Excel com lista de tarefas ou itens a verificar para o protótipo.
+
+/ConsultaSQL
+
+Comandos phpMyAdmin.pdf → Documento PDF com comandos SQL usados no phpMyAdmin, para referência ou estudo.
+
+/Dashboard
+
+Dashboard.txt → Documento explicativo ou anotação sobre o dashboard do projeto, possivelmente descrevendo telas ou funcionalidades.
+
+/Desenvolvimento
+
+Desenvolvimento de sistemas.txt → Anotações gerais sobre o processo de desenvolvimento do sistema.
+
+/Erros
+
+registro_de_erros.txt → Registro de bugs encontrados ou erros durante testes do sistema.
+
+/Pesquisa
+
+Especificações.txt → Especificações do projeto, requisitos funcionais e não funcionais.
+
+/RelatorioSQL
+
+comandos.PDF → PDF com comandos SQL detalhados, possivelmente scripts usados para relatórios.
+
+Relatorio#1.txt → Primeiro relatório de atividades, testes ou resultados obtidos.
+
+consultas.php → Script PHP que provavelmente contém consultas SQL utilizadas para testes ou relatórios.
+
+Organização de arquivos.txt → Documento explicando a organização geral do projeto (provavelmente este arquivo que você me mostrou).
+
+Prototipagem de telas Rascunho.jpeg → Esboço de telas do sistema, desenho rápido para planejamento.
+
+Prototipo de tela.png → Versão final ou mais refinada das telas prototipadas.
+
+/Telas
+
+Pasta com os arquivos do sistema web, front-end, back-end e recursos.
+
+/css
+
+relatorio.css → Estilos específicos para a seção de relatórios do dashboard.
+
+style.css → Estilos gerais do site (cores, layout, tipografia, etc).
+
+/img
+
+imagens do projeto → Todas as imagens usadas no site (ícones, banners, fotos ilustrativas).
+
+/mysql-8 → Scripts, bibliotecas ou arquivos relacionados ao MySQL 8.
+
+/mysql-8.4 → Scripts ou arquivos relacionados a uma versão específica do MySQL.
+
+/java
+
+alarms.js → Script JavaScript para alarmes ou alertas no dashboard.
+
+conexao.php → Script PHP que cria a conexão com o banco de dados MySQL.
+
+footer.php → Footer (rodapé) do site, incluído nas páginas.
+
+header.php → Header (cabeçalho) do site, incluído nas páginas.
+
+index.php → Página principal do dashboard ou do site.
+
+mabel.php → Página específica para dados do Mabel.
+
+ptqa.php → Página específica para dados do PTQA.
+
+relatorios.php → Página que exibe relatórios (médias, top 10, períodos, etc).
+
+sobre.php → Página com informações sobre o sistema ou projeto.
+
+.gitattributes → Igual ao da raiz, configurando regras do Git para esta pasta.

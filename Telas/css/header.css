@@ -1,0 +1,106 @@
+/* ====== HEADER PRINCIPAL ====== */
+.site-header {
+  position: fixed; /* fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; 
+  color: #000; /* texto agora preto */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-sizing: border-box;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+/* ====== LOGO ====== */
+.site-header .logo img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.site-header .logo img:hover {
+  transform: scale(1.05); /* efeito sutil ao passar o mouse */
+}
+
+/* ====== NAVEGAÇÃO PRINCIPAL ====== */
+.site-header .main-nav {
+  position: relative; /* necessário para o menu mobile */
+}
+
+.site-header .main-nav ul {
+  list-style: none;
+  display: flex; /* horizontal no desktop */
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header .main-nav a {
+  text-decoration: none;
+  color: #66bb6a; /* verde IFSC claro */
+  font-weight: bold;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* evita quebra de linha */
+}
+
+.site-header .main-nav a:hover,
+.site-header .main-nav a.active {
+  color: #fbc02d; /* amarelo mel para destaque */
+}
+
+/* ====== BOTÃO HAMBÚRGUER (MOBILE) ====== */
+.menu-toggle {
+  display: none; /* só aparece em mobile */
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #66bb6a;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu-toggle:hover {
+  color: #fbc02d;
+}
+
+/* ====== AJUSTE DE CONTEÚDO PARA NÃO SER COBERTO ====== */
+body {
+  padding-top: 70px; /* espaço equivalente à altura do header */
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Exibe o botão menu */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menu mobile em coluna */
+  .site-header .main-nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* abaixo do header */
+    right: 0;
+    background-color: #1e1e1e;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    gap: 15px;
+    display: none; /* oculto por padrão */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  }
+
+  /* Menu aberto */
+  .site-header .main-nav ul.open {
+    display: flex;
+  }
+}

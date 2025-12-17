@@ -1,0 +1,294 @@
+Atividades de Pesquisa – Desenvolvimento Web e Dashboards
+Quem fez: Lucas Sagaz
+Data: 21/08/2025
+1. Dashboard
+
+O que é:
+Um dashboard (ou painel de controle) é uma interface visual que organiza e apresenta dados de forma clara e interativa.
+
+Como funciona:
+
+Consolida dados de diferentes fontes.
+
+Exibe métricas e indicadores de desempenho (KPIs).
+
+Utiliza gráficos, tabelas e outros elementos visuais para facilitar a interpretação.
+
+Finalidade:
+
+Facilitar a tomada de decisões.
+
+Acompanhar métricas em tempo real.
+
+Tornar os dados acessíveis e compreensíveis.
+
+Características:
+
+Interface intuitiva.
+
+Visualização gráfica de informações.
+
+Atualização em tempo real ou periódica.
+
+Possibilidade de personalização.
+
+Quando deve ser usado:
+
+Empresas que precisam acompanhar desempenho.
+
+Projetos de pesquisa e monitoramento (ex.: MABEL e PTQA).
+
+Sistemas web que necessitam de relatórios visuais.
+
+Tecnologias indicadas:
+
+Front-end: HTML, CSS, JavaScript.
+
+Bibliotecas JS: Chart.js, ApexCharts, D3.js.
+
+Ferramentas externas: Power BI, Google Data Studio.
+
+Uso em sistemas web:
+
+Dashboards web são acessíveis de qualquer dispositivo conectado à internet.
+
+Podem se integrar a bancos de dados e APIs para atualização dinâmica.
+
+Links úteis:
+
+Artigo: O que é Dashboard?
+
+Vídeo: Dashboard – Introdução e Exemplos
+
+2. Desenvolvimento de Sistemas
+
+O que é:
+Processo de criação, manutenção e evolução de softwares que atendam a necessidades específicas de usuários ou organizações.
+
+Como funciona:
+
+Identificação de requisitos.
+
+Planejamento e modelagem.
+
+Codificação, testes e implementação.
+
+Finalidade:
+
+Resolver problemas reais.
+
+Automatizar processos.
+
+Melhorar a eficiência e a comunicação.
+
+Características:
+
+Envolve etapas bem definidas (ciclo de vida do software).
+
+Utiliza metodologias (ex.: cascata, ágil, incremental).
+
+Necessita de integração entre programadores, analistas e usuários.
+
+Etapas:
+
+Levantamento de requisitos.
+
+Análise e design.
+
+Implementação.
+
+Testes.
+
+Implantação.
+
+Manutenção.
+
+Links úteis:
+
+Artigo: O que é Desenvolvimento de Sistemas
+
+Vídeo: Etapas do Desenvolvimento de Software
+
+3. Back-end com PHP/MySQL
+
+O que é:
+
+PHP: Linguagem de programação para desenvolvimento web.
+
+MySQL: Sistema de Gerenciamento de Banco de Dados relacional.
+
+Como funciona:
+
+O PHP processa as requisições enviadas pelo usuário via navegador.
+
+O MySQL armazena e gerencia os dados.
+
+O servidor retorna ao front-end as informações solicitadas.
+
+Finalidade:
+
+Permitir que sistemas web sejam dinâmicos.
+
+Armazenar, buscar e manipular dados de forma segura.
+
+Características:
+
+PHP é de código aberto e amplamente utilizado.
+
+MySQL é escalável e confiável.
+
+Ambos possuem grande comunidade e suporte.
+
+Uso comum:
+
+Sistemas de cadastro.
+
+Aplicações com login e autenticação.
+
+Dashboards e relatórios.
+
+Links úteis:
+
+Artigo: PHP + MySQL – Guia Básico
+
+Vídeo: PHP com MySQL – Tutorial
+
+Data: 03/09/2025
+1. ApexCharts
+
+O que é:
+Biblioteca JavaScript para criação de gráficos interativos.
+
+Como funciona:
+
+Utiliza opções de configuração simples em JavaScript.
+
+Integra-se facilmente com frameworks como React, Vue e Angular.
+
+Finalidade:
+
+Criar gráficos modernos e interativos para dashboards.
+
+Características:
+
+Responsivo.
+
+Grande variedade de gráficos (linha, barra, pizza, etc.).
+
+Personalizável.
+
+Curva de aprendizagem:
+
+Simples, com documentação clara.
+
+Situações indicadas:
+
+Dashboards que necessitam de gráficos interativos em sistemas web.
+
+Links úteis:
+
+Site oficial: ApexCharts
+
+Vídeo: ApexCharts Tutorial
+
+2. Chart.js
+
+O que é:
+Biblioteca JavaScript open-source para gráficos em HTML5 com Canvas.
+
+Como funciona:
+
+Baseia-se em um único elemento <canvas>.
+
+Utiliza dados em arrays para gerar gráficos.
+
+Finalidade:
+
+Exibir dados em forma gráfica de maneira simples.
+
+Características:
+
+Leve e fácil de usar.
+
+Possui animações.
+
+Suporte a gráficos básicos.
+
+Curva de aprendizagem:
+
+Baixa, ideal para iniciantes.
+
+Situações indicadas:
+
+Projetos pequenos e médios.
+
+Dashboards simples.
+
+Links úteis:
+
+Site oficial: Chart.js
+
+Vídeo: Chart.js Tutorial
+
+3. Power BI Embedded Analytics Client API
+
+O que é:
+Ferramenta da Microsoft que permite incorporar dashboards e relatórios do Power BI em sistemas web.
+
+Como funciona:
+
+Conecta dados de diferentes fontes ao Power BI.
+
+Usa API para embutir relatórios em páginas web.
+
+Finalidade:
+
+Integrar relatórios profissionais em sistemas personalizados.
+
+Características:
+
+Alto poder de análise de dados.
+
+Relatórios interativos.
+
+Requer conta Power BI e configuração de permissões.
+
+Curva de aprendizagem:
+
+Intermediária a avançada.
+
+Situações indicadas:
+
+Projetos corporativos que necessitam de BI avançado.
+
+Links úteis:
+
+Documentação oficial: Power BI Embedded Analytics
+
+Vídeo: Power BI Embedded Tutorial
+
+4. Outras Tecnologias Relevantes
+
+D3.js: biblioteca poderosa para manipulação de dados e gráficos personalizados.
+
+Google Charts: alternativa gratuita e fácil de integrar.
+
+Referências Bibliográficas
+
+ROCKCONTENT. O que é Dashboard? Disponível em: https://rockcontent.com/br/blog/dashboard/
+. Acesso em: 25 set. 2025.
+
+TREINAWEB. O que é Desenvolvimento de Sistemas. Disponível em: https://www.treinaweb.com.br/blog/o-que-e-desenvolvimento-de-sistemas
+. Acesso em: 25 set. 2025.
+
+DEVMEDIA. PHP e MySQL – Guia Completo. Disponível em: https://www.devmedia.com.br/php-e-mysql-guia-completo/28444
+. Acesso em: 25 set. 2025.
+
+APEXCHARTS. Site Oficial. Disponível em: https://apexcharts.com/
+. Acesso em: 25 set. 2025.
+
+CHART.JS. Site Oficial. Disponível em: https://www.chartjs.org/
+. Acesso em: 25 set. 2025.
+
+MICROSOFT. Power BI Embedded Analytics. Disponível em: https://learn.microsoft.com/power-bi/developer/embedded/
+. Acesso em: 25 set. 2025.

@@ -1,0 +1,50 @@
+Histórico de Erros / Problemas do Projeto
+Quem fez: Lucas Sagaz
+
+28/08/2025 (Quinta-feira) – home.php, header.php, footer.php
+
+As páginas não abriam porque os arquivos header.php e footer.php tinham caminhos errados.
+
+O layout da home ficou bagunçado e as imagens não apareciam.
+
+31/08/2025 (Domingo) – relatorios_mabel.php
+
+As médias não estavam filtrando as datas direito.
+
+Alguns dias sumiam das tabelas porque o agrupamento por dia não pegava tudo.
+
+04/09/2025 (Quinta-feira) – ProdutoController.php
+
+A home não mostrava todas as imagens dos integrantes do grupo.
+
+11/09/2025 (Quinta-feira) – relatorios_mabel.php
+
+As últimas palavras dos relatórios saíam do limite da página nas tabelas.
+
+14/09/2025 (Domingo) – relatorios_mabel.php
+
+O top 10 dias mais quentes só mostrava resultados do mês inicial e ignorava o filtro de datas.
+
+18/09/2025 (Quinta-feira) – relatorios_mabel.php
+
+Os filtros funcionavam, mas não dava pra escolher qual dado ver (temperatura, umidade, ninho ou top).
+
+19/09/2025 (Sexta-feira) – relatorios_ptqa.php
+
+O dashboard PTQA não deixava escolher entre média diária ou mostrar todos os dados.
+
+25/09/2025 (Quinta-feira) – relatorios_mabel.php e relatorios_ptqa.php
+
+Tabelas ficaram desalinhadas quando tinha valor nulo; células em branco sem placeholder.
+
+16/10/2025 (Quinta-feira) – relatorios_mabel.php e relatorios_ptqa.php
+
+Professor fez reclamação de relatorio e dashboard, estavam em locais errados.
+
+23/10/2025 (Quinta-feira) – imagens na pagina php do moodle
+
+Erro nas paginas php herdando o caminho do css e do caminho das imagens.
+
+30/10/2025 (Quinta-feira) – erro na impressão do eco 2 e na Aqi
+
+A Aqi e o Eco2 não estavam imprimindo como solicitado nos requisitos e os graficos estão sem visualização de dados escritos.

@@ -1,0 +1,93 @@
+﻿Quem fez: Julia.
+
+Power BI Embedded Analytics Client API:
+
+O QUE É?  
+é uma biblioteca JavaScript ou TypeScript que permite a interação programática com conteúdo do Power BI inserido em uma aplicação web ou personalizada.
+
+
+COMO FUNCIONA? 
+É um conjunto de funções sobre JavaScript que permite que um aplicativo web interaja com um relatório ou painel do Power BI incorporado, que está hospedado dentro de um iframe
+
+
+QUAL A FINALIDADE? 
+permitir que o desenvolvedor controle e interaja programaticamente com relatórios e paineis   do Power BI que foram incorporados numa aplicação personalizada, usando JavaScript ou TypeScript
+
+
+CARACTERÍSTICAS: 
+
+Integração em Aplicações Web
+ Permite incorporar relatórios, dashboards e visuais diretamente em apps web.
+
+APIs Baseadas em JavaScript
+ Client API é uma biblioteca JS usada para controlar objetos Power BI embutidos (relatórios, dashboards, tiles etc.).
+
+Interatividade Total
+ Suporte a filtros, seleção de dados, navegação de páginas e eventos do usuário.
+
+Personalização
+ Controle sobre a aparência e comportamento dos elementos incorporados (tema, layout, menus, etc.).
+
+Eventos e Listeners
+ Permite escutar eventos como mudança de página, seleção de visual, carregamento completo, erros, etc.
+
+Exportação e Impressão
+ Suporte para exportar dados, imprimir relatórios e gerar PDF via API.
+
+Suporte a Autenticação
+ Integração com tokens de acesso (como Azure AD e Embed Token) para segurança.
+
+Atualizações em Tempo Real
+ Possibilidade de atualizar dados e re-renderizar visuais dinamicamente.
+
+Suporte Multiplataforma
+ Funciona em qualquer app que suporte HTML/JS (como Angular, React, Blazor, etc.).
+
+
+CURVA DE APRENDIZAGEM:  A  curva de aprendizagem da API do Cliente do Power BI  Embedded é moderada, exigindo familiaridade com JavaScript ou TypeScript, mas com recursos como Playground de Análise incorporada  e exemplos no GitHub para facilitar a familiarização.
+
+EM QUE SITUAÇÕES DEVE SER USADO?
+1. Você precisa exibir relatórios dentro de um sistema ou portal personalizado, e não quer usar o portal do Power BI.
+
+2. Usuários finais não têm licença Power BI Pro, e você usará capacidade do Power BI Embedded.
+
+3. Quer personalizar a experiência visual (remover menus, aplicar filtros dinâmicos, controlar navegação, etc.).
+
+4. Deseja controlar interações por código (capturar cliques, mudar páginas, exportar relatórios, etc.).
+
+5. Está criando uma solução white-label (marca branca), onde o usuário não deve perceber que é Power BI.
+
+6. Precisa integrar o Power BI a um app já existente, mantendo identidade visual e controle total.
+
+📌 Outras Informações Relevantes (Resumo)
+   * Autenticação:
+Usa Azure AD (com conta Power BI) ou Embed Token (sem conta, ideal para apps com muitos usuários).
+
+   * Licenciamento:
+Requer capacidade dedicada (Power BI Embedded – A SKUs) para uso em produção.
+
+   * Componentes Técnicos:
+Frontend (JS + Client API) + Backend (gera tokens) + Power BI Service (armazenamento dos relatórios).
+
+   * Biblioteca:
+powerbi-client (npm) — permite embed de relatórios, dashboards, Q&A, tiles e relatórios paginados.
+
+   * Ambiente de Testes:
+Pode testar grátis com conta Power BI + capacidade de dev.
+
+   * Recursos Úteis:
+
+      * Power BI Playground – simula embed via navegador.
+
+      * Docs oficiais Microsoft
+
+
+
+vídeos:
+https://youtu.be/WLRSI5PMzSk?si=74TlVjX_WceiV-r3
+
+
+https://youtu.be/rrOa35rGCj0?si=bsd5j9e1sDFT64OE
+
+
+https://youtu.be/GFr2KhsV0gk?si=bvqsRjBfbJxy0OgN
